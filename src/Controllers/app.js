@@ -13,7 +13,7 @@ function employeeController(argument) {
     let getUserData = async function(){
         try {
             return await new Promise(function (resolve) {
-                addUser();
+                userData();
 
                 return resolve(true);
             })    
@@ -53,9 +53,8 @@ function rowCounter() {
         activeMemberSpan.html(tbodyRowCount + " active members.");
     }
 }
-
-//adds a new user 
-function addUser(){
+ 
+function userData(){
     let fullName = Faker.name.findName();
     let emailAdd = Faker.internet.exampleEmail(fullName);
 
@@ -103,7 +102,7 @@ function addUser(){
     rowCounter();
 }
 
-export function addUserEvent(){
+export function userDataEvent(){
     let employeeControllerObj = new employeeController();
     employeeControllerObj.getData()
     .then((resolve) => {
@@ -117,7 +116,7 @@ export function addUserEvent(){
 
 function onLoadEvent() {
     for (let i = 1; i <= 5; i++){
-        addUser();
+        userData();
     }
 }
 
