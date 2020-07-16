@@ -41,13 +41,16 @@ function employeeController(argument) {
 
 //counts the no. of active users 
 function rowCounter() {
-    const tbodyRowCount = empTable.tBodies[0].rows.length-1;
-    if (tbodyRowCount > 1) {
-        $("#active_members").html(tbodyRowCount + " active members.");
+    const tbodyRowCount = empTable.tBodies[0].rows.length - 1;
+    const activeMemberSpan = $("#active_members");
+    if (!tbodyRowCount) {
+        activeMemberSpan.html("no active members.");
+    }
+    else if (tbodyRowCount == 1) {
+        activeMemberSpan.html(tbodyRowCount + " active member.");
     }
     else {
-        $("#active_members").html(tbodyRowCount + " active member.");
-    
+        activeMemberSpan.html(tbodyRowCount + " active members.");
     }
 }
 
