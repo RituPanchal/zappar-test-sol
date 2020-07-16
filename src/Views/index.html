@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="artBoard">
+            <div class="contentBoard">
+                <div class="members">
+                    <div class="members_head lato-light">Members</div>
+                    <button class="" onclick="appGlobal.addUserEvent();"><span class="plus">+</span></button>
+                </div>
+                <div class="tableBoard">
+                    <table id="emp_table" class="empTable">
+                        <thead>
+                            <tr class="lato-bold">
+                                <th>Team member</th>
+                                <th>Email</th>
+                                <th>Permission level</th>
+                            </tr>
+                        </thead>
+                        <tbody class="lato-regular">
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="invite">
+                        <span class="active_text lato-regular">Your team has <span id="active_members"></span> active members.</span>
+                        <span type="button" class="invite_text lato-bold" onclick="appGlobal.addUserEvent();">
+                            <i class="fas fa-user-plus"></i>
+                            INVITE
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </body>
+    <script src="../../dist/build.js"></script>
+</html>
+
+
+</html>

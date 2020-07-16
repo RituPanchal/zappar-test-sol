@@ -1,0 +1,121 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./resets";
+@import "./variables";
+
+body{
+    color: $text-color !important;
+    font-size: 14px !important;
+    font-weight: weight(regular) !important;
+    background: $background-color;
+}
+
+.artBoard {
+    padding: 54px 136px 59px 136px;
+}
+
+.members{
+    display: flex;
+    position: relative;
+    margin-bottom: 24px;
+
+    #{&}_head{
+        font-size: 28px;
+        margin-right: 11px;
+        font-weight: weight(light);
+    }
+
+    & button {
+        background-color: $active-btn-color;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        color: $white-color;
+        border: none;
+
+        &:focus {
+            outline:0 !important;
+        }
+
+        span{
+            font-size: 18px;
+        }
+    }
+}
+
+// table
+.tableBoard{
+    background: $white-color;
+    height: 100%;
+    display: block;
+    padding: 24px 20px 27px 16px;
+    border-radius: 12px;
+}
+
+.empTable {
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+        pointer-events: none;
+        border-bottom: none;
+        padding-bottom: 15px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: weight(bold);
+
+    }
+
+    td {
+        padding: 22px 0px 20px 0px;
+        margin-right: 30px;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child{
+            width: 200px;
+
+            i {
+                display: none;
+                float: right;
+                margin-right: 13.6px;
+            }
+
+        }
+
+    }
+
+    tr:hover {
+        background-color: $hover-bg-color;
+
+        & > td:last-child > i {
+            display: block;
+            cursor: pointer;
+            transition: all 0.5s ease-in;
+        }
+
+    }
+}
+
+.user_image{
+    height: 32px;
+    width: 32px;
+    border-radius: 30%;
+    margin-left: 8.5px;
+    margin-right: 16px;
+}
+
+.invite{
+    margin-left: 2px;
+    margin-top: 20px;
+
+    .active_text{
+        color: $secondary-text;
+    }
+    
+    #{&}_text i{
+        margin-left: 10px;
+        margin-right: 6px;
+        font-weight: weight(bold);
+    }
+}
+

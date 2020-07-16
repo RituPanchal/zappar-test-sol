@@ -1,0 +1,19 @@
+//colors
+$text-color: #344B60;
+$background-color: #FBFBFB;
+$white-color: #ffffff;
+$border-color: #CCCCCC;
+$secondary-text: #9B9B9B;
+$active-btn-color: #CE3923;
+$hover-bg-color:  rgba(115, 180, 255, 0.09);
+
+//font-weight
+$font-weights : ( 
+    "bold": 700,
+    "regular": 400,
+    "light": 300
+);
+
+@function weight($weight-value){
+    @return map-get($font-weights, $weight-value);
+}

@@ -1,0 +1,24 @@
+/* font family */
+.lato-bold{
+    font-family: "Lato-Bold";
+  }
+  .lato-light{
+    font-family: "Lato-Light";
+  }
+  .lato-regular{
+    font-family: "Lato-Regular";
+  }
+  
+  /* font-face */
+  @font-face {
+    font-family: "Lato-Bold";
+    src: url("../fonts/Lato/Lato-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Lato-Light";
+    src: url("../fonts/Lato/Lato-Light.ttf");
+  }
+  @font-face {
+    font-family: "Lato-Regular";
+    src: url("../fonts/Lato/Lato-Regular.ttf");
+  }
